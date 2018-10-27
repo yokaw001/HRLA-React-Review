@@ -17,7 +17,7 @@ Inside of your App component, create an input field. Build out some functionalit
 Inside your components folder, create another component called List.jsx. Build out functionality that will allow you to add a string from App to render in List. Then build functionality to add multiple strings to an array and render from List.
 
 #Exercise-4 Dynamic Rendering<br/>
-Create another functional component called ListEntry.jsx in your components folder. Develop some functionality that will render all the elements stored in the array in List.jsx to the page.
+Create another functional component called Task.jsx in your components folder. Develop some functionality that will render all the elements stored in the array in List.jsx to the page using Task.jsx.
 
 #Exercise-5 Delete Functionality<br/>
 Add a delete functionality to Task.jsx so that if the task is clicked, you can remove it.
