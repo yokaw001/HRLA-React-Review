@@ -12,6 +12,7 @@ class App extends React.Component{
     this.handleText = this.handleText.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
+    this.handleEdit = this.handleEdit.bind(this);
   }
 
   handleSubmit(){
@@ -34,13 +35,21 @@ class App extends React.Component{
     })
   }
 
+  handleEdit(index){
+    let newTask = window.prompt('')
+    this.state.store.splice(index, 1, newTask)
+    this.setState({
+      text: ''
+    })
+  }
+
   render(){
     return(
       <div>
         <h1>Hello from React!</h1>
         <input type='text' onChange={this.handleText}></input>
         <button onClick={()=>{this.handleSubmit()}}>Submit</button>
-        <List text={this.state.store} delete={this.handleDelete}/>
+        <List text={this.state.store} delete={this.handleDelete} edit={this.handleEdit}/>
       </div>
     )
   }
