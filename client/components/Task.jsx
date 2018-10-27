@@ -5,6 +5,7 @@ let Task = (props) =>(
     <ul>
       <li>
         {props.task}
+        <button onClick={()=>{props.delete(props.index)}}>Delete</button>
       </li>
     </ul>
   </div>

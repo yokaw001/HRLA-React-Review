@@ -11,6 +11,7 @@ class App extends React.Component{
     }
     this.handleText = this.handleText.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
   }
 
   handleSubmit(){
@@ -26,7 +27,12 @@ class App extends React.Component{
     })
   }
 
-  
+  handleDelete(index){
+    this.state.store.splice(index, 1);
+    this.setState({
+      text: ''
+    })
+  }
 
   render(){
     return(
@@ -34,7 +40,7 @@ class App extends React.Component{
         <h1>Hello from React!</h1>
         <input type='text' onChange={this.handleText}></input>
         <button onClick={()=>{this.handleSubmit()}}>Submit</button>
-        <List text={this.state.store}/>
+        <List text={this.state.store} delete={this.handleDelete}/>
       </div>
     )
   }
