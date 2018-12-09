@@ -11,6 +11,7 @@ npm start<br/>
 Create folder called Components within the client folder. Inside of components folder, create a file called App.jsx and build out a functional react component in that file that renders "Hello from App" onto the DOM.
 
 #Exercise-2 Creating a Functional Component in React<br/>
+
 Inside of your App component, create an input field. Build out some functionality that will allow you to see what your typing in real time in the console.
 
 #Exercise-3 Add Another Component<br/>
