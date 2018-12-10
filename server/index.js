@@ -1,14 +1,24 @@
 const express = require('express');
 const parser = require('body-parser');
 const path = require('path');
-const PORT = 3000;
+const router = require('./router.js')
 
+const PORT = 3000;
 const app = express();
 
 app.use(express.static(path.join(__dirname, '../static')));
 app.use(parser.json());
-app.use(parser.urlencoded({ extended: true }));
+app.use(parser.urlencoded({
+    extended: true
+}))
 
-app.listen(PORT, () => {
-  console.log('App is listening on PORT:', PORT);
-});
+
+app.use('/', router);
+
+app.listen(PORT, (err) => {
+    if (err) {
+        console.log("connection error:", err)
+    } else {
+        console.log("connected from 93'til ", PORT)
+    }
+})
